@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-from setuptools import setup, find_packages
-
-import os
-
+from setuptools import find_packages
+from setuptools import setup
 
 version = '1.0'
 
@@ -21,13 +19,13 @@ setup(name='plonesocial.messaging',
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
-        'Environment :: Web Environment',
-        'Framework :: Plone',
-        'Operating System :: OS Independent',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 2.6',
-        'Topic :: Software Development :: Libraries :: Python Modules',
-        ],
+          'Environment :: Web Environment',
+          'Framework :: Plone',
+          'Operating System :: OS Independent',
+          'Programming Language :: Python',
+          'Programming Language :: Python :: 2.6',
+          'Topic :: Software Development :: Libraries :: Python Modules',
+      ],
       keywords='',
       author='',
       author_email='',
@@ -39,11 +37,23 @@ setup(name='plonesocial.messaging',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'setuptools',
           'plone.api'
-          # -*- Extra requirements: -*-
+          'Products.CMFCore',
+          'Products.CMFPlone >=4.3',
+          'Products.GenericSetup',
+          'setuptools',
+          'zope.component',
+          'zope.event',
+          'zope.i18nmessageid',
+          'zope.interface',
+          'zope.schema',
       ],
-      extras_require={'test': ['plone.app.testing[robot]>=4.2.2']},
+      extras_require={
+          'test': [
+              'plone.app.testing[robot] >=4.2.2',
+              'plone.testing',
+          ],
+      },
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
