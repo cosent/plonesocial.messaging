@@ -37,7 +37,7 @@ setup(name='plonesocial.messaging',
       include_package_data=True,
       zip_safe=False,
       install_requires=[
-          'plone.api'
+          'plone.api',
           'Products.CMFCore',
           'Products.CMFPlone >=4.3',
           'Products.GenericSetup',
