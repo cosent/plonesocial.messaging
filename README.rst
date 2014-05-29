@@ -3,8 +3,8 @@
 Introduction
 ============
 
-.. image:: https://travis-ci.org/tisto/plonesocial.messaging.png?branch=master
-    :target: http://travis-ci.org/tisto/plonesocial.messaging
+.. image:: https://travis-ci.org/cosent/plonesocial.messaging.png?branch=master
+    :target: http://travis-ci.org/cosent/plonesocial.messaging
 
 
 **plonesocial.messaging** allows the exchange of private messages among
