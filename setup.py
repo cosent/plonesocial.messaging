@@ -7,14 +7,14 @@ version = '1.0'
 long_description = (
     open('README.rst').read()
     + '\n' +
-    open('CONTRIBUTORS.txt').read()
+    open('CONTRIBUTORS.rst').read()
     + '\n' +
     open('CHANGES.rst').read()
 )
 
 setup(name='plonesocial.messaging',
       version=version,
-      description='',
+      description='Exchange private messages among Plone users',
       long_description=long_description,
       # Get more strings from
       # http://pypi.python.org/pypi?%3Aaction=list_classifiers
@@ -26,11 +26,10 @@ setup(name='plonesocial.messaging',
           'Programming Language :: Python :: 2.6',
           'Topic :: Software Development :: Libraries :: Python Modules',
       ],
-      keywords='',
+      keywords='plone socbiz social messages',
       author='',
       author_email='',
-      url='http://svn.plone.org/svn/collective/',
-      license='gpl',
+      url='https://github.com/cosent/plonesocial.messaging',
       packages=find_packages('src'),
       package_dir={'': 'src'},
       namespace_packages=['plonesocial', ],
