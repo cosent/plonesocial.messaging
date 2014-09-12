@@ -41,6 +41,7 @@ setup(name='plonesocial.messaging',
       install_requires=[
           'plone.api',
           'plone.app.jquerytools',
+          'plonesocial.core',
           'Products.CMFCore',
           'Products.CMFPlone >=4.3',
           'Products.GenericSetup',
