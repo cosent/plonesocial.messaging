@@ -1,13 +1,11 @@
 Changelog
 =========
 
-1.0-dev (unreleased)
---------------------
+0.7.0 (unreleased)
+------------------
 
-- Package created using templer
-  []
+* "Berlin" sprint
 
-1.1-dev (Plone Sprint Berlin 08/09/14)
 Completed
 - @@social-inbox view (both the small and large views)
 - Components added to the ploneintranet theme
@@ -21,3 +19,9 @@ To Do
 - The Patterns Lib component pat-tooltip only handles on success calls. Currently if the user is not logged in, then an unauthorised error is raised. I guess this should be handled by this pattern?
 - The @@messaging-send should handle POSTs nicely. This is needed for the modal box and the reply field on @@social-inbox.
 - We need to trigger the @@delete-message BrowserView element at some point
+
+
+Earlier
+-------
+
+* Backend contributed, no changelog
