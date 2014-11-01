@@ -4,6 +4,11 @@ Changelog
 0.7.0 (unreleased)
 ------------------
 
+* "Bristol" sprint
+
+Completed
+- Plone 5 compatibility
+
 * "Berlin" sprint
 
 Completed
