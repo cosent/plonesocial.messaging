@@ -3,8 +3,8 @@ python: 2.7
 install:
   - mkdir -p buildout-cache/downloads
   - python bootstrap.py
-  - bin/buildout -N -t 3
-script: 
+  - bin/buildout -N -t 10
+script:
   - bin/test
   - bin/code-analysis
 
