@@ -3,7 +3,7 @@ python: 2.7
 install:
   - mkdir -p buildout-cache/downloads
   - python bootstrap.py
-  - bin/buildout -N -t 10
+  - bin/buildout -N -t 10 -c travis.cfg
 script:
   - bin/test
   - bin/code-analysis
