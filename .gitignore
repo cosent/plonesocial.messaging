@@ -3,6 +3,8 @@
 *.egg-info
 .installed.cfg
 bin/
+buildout-cache/
+src/plonesocial.*/
 develop-eggs/
 include/
 lib/
