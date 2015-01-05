@@ -11,3 +11,4 @@ lib/
 local/
 parts/
 var/
+buildout-cache
