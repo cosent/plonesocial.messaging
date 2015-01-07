@@ -133,6 +133,27 @@ Even then Bob still has the conversation with Dave in his inbox:
     created: 2013-01-02 00:00:00
     new: True
 
+Build status
+------------
+
+Unit tests
+~~~~~~~~~~
+
+.. image:: https://travis-ci.org/cosent/plonesocial.messaging.png?branch=master
+    :target: http://travis-ci.org/cosent/plonesocial.messaging
+.. image:: http://jenkins.ploneintranet.net/buildStatus/icon?job=Plone%20Social%20Messaging
+    :target: http://jenkins.ploneintranet.net/job/Plone%20Social%20Messaging/
+
+Robot tests for Plone Social and Plone Intranet
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. image:: http://jenkins.ploneintranet.net/buildStatus/icon?job=Plone%20Social%20Suite
+   :target: http://jenkins.ploneintranet.net/job/Plone%20Social%20Suite%20Master/badge/
+
+.. image:: http://jenkins.ploneintranet.net/buildStatus/icon?job=Plone%20Intranet%20Suite%20Master
+   :target: http://jenkins.ploneintranet.net/job/Plone%20Intranet%20Suite%20Master/badge/
+
+
 Copyright (c) Plone Foundation
 ------------------------------
 
