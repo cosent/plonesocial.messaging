@@ -5,6 +5,7 @@
 bin/
 buildout-cache/
 src/plonesocial.*/
+src/plone.app.blocks
 develop-eggs/
 include/
 lib/
@@ -12,3 +13,4 @@ local/
 parts/
 var/
 buildout-cache
+.mr.developer.cfg
