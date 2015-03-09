@@ -1,10 +1,8 @@
 language: python
 python: 2.7
-install:
-  - mkdir -p buildout-cache/downloads
-  - python bootstrap.py
-  - bin/buildout -N -t 10 -c travis.cfg
-script:
-  - bin/test
+install: make buildout
+script: 
+  - make test
   - bin/code-analysis
-
+notifications:
+  email: guido.stevens@cosent.net
