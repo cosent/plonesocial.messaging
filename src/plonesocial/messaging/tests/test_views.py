@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from datetime import datetime
+from plone.app.testing.helpers import login
 from plone.testing.z2 import Browser
 from plonesocial.messaging.testing import \
     PLONESOCIAL_MESSAGING_FUNCTIONAL_TESTING
@@ -101,14 +102,20 @@ class TestAjaxViews(unittest.TestCase):
             'testuser1', 'testuser2', 'Message Text', created=now)
         inbox = self.portal.plonesocial_messaging['testuser1']
         message_id = inbox['testuser2'].keys()[0]
-        self._login('testuser1', 'testuser1')
-        self.browser.open(self.portal_url +
-                          '/@@delete-message?user=testuser2&message=' +
-                          str(message_id))
-        content = json.loads(self.browser.contents)
+        self.request.form = {
+            'user': 'testuser2',
+            'message': str(message_id),
+        }
+        login(self.portal, 'testuser1')
+        view = api.content.get_view(
+            context=self.portal,
+            request=self.request,
+            name='delete-message')
+        content = json.loads(view())
         self.assertEqual(content['result'], True)
         self.assertIn(str(message_id), content['message'])
         self.assertNotIn(message_id, inbox['testuser2'])
+        self.request.form = {}
 
     def test_list_conversations(self):
         self._create_message('testuser1', 'testuser2', 'Message Text',
@@ -125,12 +132,18 @@ class TestAjaxViews(unittest.TestCase):
         self._create_message(
             'testuser1', 'testuser2', 'Message Text', created=now)
         self.assertEqual(len(self._conversations('testuser1')), 1)
-        self._login('testuser1', 'testuser1')
-        self.browser.open(
-            self.portal_url + '/@@delete-conversation?user=testuser2')
-        content = json.loads(self.browser.contents)
+        self.request.form = {
+            'user': 'testuser2',
+        }
+        login(self.portal, 'testuser1')
+        view = api.content.get_view(
+            context=self.portal,
+            request=self.request,
+            name='delete-conversation')
+        content = json.loads(view())
         self.assertEqual(content, {u'result': True})
         self.assertEqual(len(self._conversations('testuser1')), 0)
+        self.request.form = {}
 
 
 class TestYourMessagesView(unittest.TestCase):
