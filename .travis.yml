@@ -3,6 +3,5 @@ python: 2.7
 install: make buildout
 script: 
   - make test
-  - bin/code-analysis
 notifications:
   email: guido.stevens@cosent.net

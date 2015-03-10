@@ -3,12 +3,9 @@ default: buildout
 buildout: bin/buildout
 	bin/buildout -c buildout.cfg -N
 
-travis: bin/buildout buildout-cache/downloads
-	bin/buildout -c travis.cfg -N -t 3
-
 test:
-	bin/test -s plonesocial.microblog
-	bin/flake8 src/plonesocial
+	bin/test -s plonesocial.messaging
+	bin/code-analysis
 
 bin/buildout: bin/python
 	bin/pip install -r requirements.txt
