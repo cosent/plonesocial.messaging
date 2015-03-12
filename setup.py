@@ -12,7 +12,7 @@ long_description = (
     open('CHANGES.rst').read()
 )
 
-setup(name='plonesocial.messaging',
+setup(name='ploneintranet.messaging',
       version=version,
       description='Exchange private messages among Plone users',
       long_description=long_description,
@@ -32,16 +32,16 @@ setup(name='plonesocial.messaging',
       keywords='plone socbiz social messages',
       author='',
       author_email='',
-      url='https://github.com/cosent/plonesocial.messaging',
+      url='https://github.com/cosent/ploneintranet.messaging',
       packages=find_packages('src'),
       package_dir={'': 'src'},
-      namespace_packages=['plonesocial', ],
+      namespace_packages=['ploneintranet', ],
       include_package_data=True,
       zip_safe=False,
       install_requires=[
           'plone.api',
           'plone.app.jquerytools',
-          'plonesocial.core',
+          'ploneintranet.core',
           'Products.CMFCore',
           'Products.CMFPlone >=4.3',
           'Products.GenericSetup',

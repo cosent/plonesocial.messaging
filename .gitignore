@@ -4,7 +4,7 @@
 .installed.cfg
 bin/
 buildout-cache/
-src/plonesocial.*/
+src/ploneintranet.*/
 src/plone.app.blocks
 develop-eggs/
 include/

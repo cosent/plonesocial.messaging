@@ -4,7 +4,7 @@ buildout: bin/buildout
 	bin/buildout -c buildout.cfg -N
 
 test:
-	bin/test -s plonesocial.messaging
+	bin/test -s ploneintranet.messaging
 	bin/code-analysis
 
 bin/buildout: bin/python

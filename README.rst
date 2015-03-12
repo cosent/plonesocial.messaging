@@ -3,11 +3,11 @@
 Introduction
 ============
 
-.. image:: https://travis-ci.org/cosent/plonesocial.messaging.png?branch=master
-    :target: http://travis-ci.org/cosent/plonesocial.messaging
+.. image:: https://travis-ci.org/cosent/ploneintranet.messaging.png?branch=master
+    :target: http://travis-ci.org/cosent/ploneintranet.messaging
 
 
-**plonesocial.messaging** allows the exchange of private messages among
+**ploneintranet.messaging** allows the exchange of private messages among
 Plone users. The messages are stored in a separate tree outside the user
 folders and are not Plone content for performance reasons.
 
@@ -30,7 +30,7 @@ Usage
 First we want to get the messaging tool
 
     >>> from datetime import datetime
-    >>> from plonesocial.messaging.interfaces import IMessagingLocator
+    >>> from ploneintranet.messaging.interfaces import IMessagingLocator
     >>> from zope.component import getUtility
     >>> locator = getUtility(IMessagingLocator)
     >>> inboxes = locator.get_inboxes()
@@ -55,7 +55,7 @@ All Objects except messages provide a dict api.
     True
     >>> daves_inbox = inboxes[dave]
     >>> daves_inbox
-    <plonesocial.messaging.messaging.Inbox object at ...>
+    <ploneintranet.messaging.messaging.Inbox object at ...>
 
 
 In Dave's inbox we can find his conversation with Bob that Dave did
@@ -63,7 +63,7 @@ not read yet
 
     >>> conversation = daves_inbox[bob]
     >>> conversation
-    <plonesocial.messaging.messaging.Conversation object at ...>
+    <ploneintranet.messaging.messaging.Conversation object at ...>
     >>> conversation.new_messages_count
     1
     >>> conversation.username
@@ -139,8 +139,8 @@ Build status
 Unit tests
 ~~~~~~~~~~
 
-.. image:: https://travis-ci.org/cosent/plonesocial.messaging.png?branch=master
-    :target: http://travis-ci.org/cosent/plonesocial.messaging
+.. image:: https://travis-ci.org/cosent/ploneintranet.messaging.png?branch=master
+    :target: http://travis-ci.org/cosent/ploneintranet.messaging
 .. image:: http://jenkins.ploneintranet.net/buildStatus/icon?job=Plone%20Social%20Messaging
     :target: http://jenkins.ploneintranet.net/job/Plone%20Social%20Messaging/
 

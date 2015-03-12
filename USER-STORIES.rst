@@ -24,7 +24,7 @@ Simple view that returns json or HTML.
 As a member I am notified if I received a message from another member
 ---------------------------------------------------------------------
 
-plonesocial.messaging should fire events that integrators can use for the
+ploneintranet.messaging should fire events that integrators can use for the
 notification.
 
 
